@@ -1,0 +1,134 @@
+@font-face{
+    font-family: Exo-bold;
+    src: url(../fonts/Exo-Bold.otf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+@font-face{
+    font-family: Quicksand-Bold;
+    src: url(../fonts/Quicksand-Bold.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+@font-face{
+    font-family: Quicksand-Regular;
+    src: url(../fonts/Quicksand-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+:root{
+    --primary-color: #212529;
+    --second-color: #f99;
+    --third-color: #ff9;
+    --primary-font: "Quicksand-Regular";
+    --second-font: "Quicksand-Bold";
+    --third-font: "Exo-bold";
+}
+.q-effect-1{
+    position: relative;
+    padding: 50px 100px;
+}
+.q-effect-1 .btn-ef{
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg,#f99,#ff9);
+    color: #000;
+    padding: 15px 45px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--third-font);
+    position: relative;
+    transition: 0.2s;
+}
+.q-effect-1 .btn-ef span{
+    position: absolute;
+}
+.q-effect-1 .btn-ef span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,transparent,#fff);
+}
+.q-effect-1 .btn-ef span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#fff);
+}
+.q-effect-1 .btn-ef span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(180deg,transparent,#fff);
+}
+.q-effect-1 .btn-ef span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#fff);
+}
+.q-effect-1 .btn-ef:hover{
+    background: linear-gradient(90deg, #4be036, #19f1dd);
+    box-shadow: 0 0 10px linear-gradient(90deg, #4be036, #19f1dd);
+    transition-delay: 0.75s;
+}
+.q-effect-1 .btn-ef:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+    animation: animation 1s linear infinite;
+}
+.q-effect-1 .btn-ef:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+    animation: animation2 1.25s linear infinite;
+}
+.q-effect-1 .btn-ef:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+    animation: animation3 1.25s linear infinite;
+}
+.q-effect-1 .btn-ef:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+    animation: animation4 1s linear infinite;
+}
+@keyframes animation{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes animation2{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+@keyframes animation3{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes animation4{
+    0%{
+        bottom: -100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
